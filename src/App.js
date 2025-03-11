@@ -38,7 +38,7 @@ const Navbar = ({ toggleDarkMode, darkMode }) => (
       <a href="https://www.linkedin.com/in/diego-barreiro-20580826b/" target="_blank" rel="noopener noreferrer">
         <FaLinkedin size={40} />
       </a>
-      <a href="https://github.com/tu-github" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/Dieg0bl" target="_blank" rel="noopener noreferrer">
         <FaGithub size={40} />
       </a>
     </div>
