@@ -25,7 +25,6 @@ import {
   SiJetpackcompose,
   SiIntellijidea,
   SiAndroidstudio,
-  SiVisualstudiocode,
   SiNetbeans,
   SiEclipse,
   SiPostman
