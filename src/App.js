@@ -25,7 +25,6 @@ import {
   SiJetpackcompose,
   SiIntellijidea,
   SiAndroidstudio,
-  SiNetbeans,
   SiEclipse,
   SiPostman
 } from 'react-icons/si';
