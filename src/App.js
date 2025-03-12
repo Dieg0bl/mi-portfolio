@@ -16,8 +16,8 @@ import {
   FaPhone
 } from 'react-icons/fa';
 import { SiSpring, SiApachemaven, SiKotlin, SiAndroid, SiJetpackcompose } from 'react-icons/si';
-import heroBackground from './images/hero-background.jpg';
-import profileImage from './images/profile.jpg';
+import heroBackground from './images/hero-background.jpg'; // Imagen de fondo
+import profileImage from './images/profile.jpg'; // Imagen de perfil
 
 // --- Componente Navbar con menú responsivo ---
 const Navbar = ({ toggleDarkMode, darkMode }) => {
@@ -81,7 +81,7 @@ const About = () => (
         Soy Diego Barreiro, desarrollador especializado en aplicaciones multiplataforma. Con formación oficial y experiencia en proyectos full-stack, transformo ideas en soluciones digitales innovadoras.
       </p>
       <p>
-        Trabajo con tecnologías como Java, Kotlin, Spring Boot y Jetpack Compose. Además, he complementado mi carrera en desarrollo utilizando herramientas como Android Studio, Eclipse, NetBeans, IntelliJ IDEA y Visual Studio Code en entornos Windows y Linux.
+        Trabajo con tecnologías como Java, Kotlin, Spring Boot y Jetpack Compose. Además, he complementado mi carrera usando herramientas como Android Studio, Eclipse, NetBeans, IntelliJ IDEA y Visual Studio Code en entornos Windows y Linux.
       </p>
       <p>
         Mi enfoque se centra en la eficiencia, la innovación y la mejora continua, y valoro entornos que fomenten la conciliación y la flexibilidad. Este portfolio es una muestra práctica de mi trabajo, mientras que mi CV (descargable) resume formalmente mi trayectoria profesional.
@@ -141,34 +141,20 @@ const Projects = () => {
       <div className="projects-grid">
         {projects.map(project => (
           <div className="project-item" key={project.id}>
-            {/* Imagen enlazada al repo (opcional) */}
             <a href={project.codeLink} target="_blank" rel="noopener noreferrer">
               <img src={project.image} alt={project.title} />
-            </a>
-
-            <div className="project-info">
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <p className="tech-stack">
-                {project.tech.map((tech, index) => (
-                  <span key={index} style={{ marginLeft: '10px' }}>
-                    {tech.icon} {tech.name}
-                  </span>
-                ))}
-              </p>
-
-              {/* Botón adicional para ver el repo */}
-              <div className="project-buttons">
-                <a
-                  href={project.codeLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-repo"
-                >
-                  Ver en GitHub
-                </a>
+              <div className="project-info">
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <p className="tech-stack">
+                  {project.tech.map((tech, index) => (
+                    <span key={index} style={{ marginLeft: '10px' }}>
+                      {tech.icon} {tech.name}
+                    </span>
+                  ))}
+                </p>
               </div>
-            </div>
+            </a>
           </div>
         ))}
       </div>
@@ -181,17 +167,30 @@ const Skills = () => (
   <section id="skills" className="skills container">
     <h2>Habilidades Técnicas</h2>
     <div className="skills-grid">
+      {/* Habilidades principales */}
       <div className="skill-item"><FaJava size={40} color="#007396" /> Java</div>
-      <div className="skill-item"><FaDatabase size={40} color="#4DB33D" /> Oracle, MySQL, PostgreSQL, MariaDB</div>
+      <div className="skill-item"><SiKotlin size={40} color="#A97BFF" /> Kotlin</div>
+      <div className="skill-item"><FaDatabase size={40} color="#4DB33D" /> SQL (Oracle, MySQL, PostgreSQL, MariaDB)</div>
       <div className="skill-item"><FaHtml5 size={40} color="#E34F26" /> HTML5</div>
       <div className="skill-item"><FaCss3Alt size={40} color="#1572B6" /> CSS3</div>
-      <div className="skill-item"><SiKotlin size={40} color="#A97BFF" /> Kotlin</div>
-      <div className="skill-item"><SiJetpackcompose size={40} color="#3DDC84" /> Jetpack Compose</div>
-      <div className="skill-item"><FaRobot size={40} color="#FF9900" /> IA</div>
-      <div className="skill-item"><FaJsSquare size={40} color="#F7DF1E" /> JavaScript</div>
+      <div className="skill-item"><FaLinux size={40} color="#FCC624" /> Linux (Ubuntu, Debian)</div>
+      <div className="skill-item"><FaWindows size={40} color="#00A4EF" /> Windows</div>
+      
+      {/* Herramientas de desarrollo / IDEs */}
+      <div className="skill-item"><SiIntellijidea size={40} color="#000000" /> IntelliJ IDEA</div>
+      <div className="skill-item"><SiAndroidstudio size={40} color="#3DDC84" /> Android Studio</div>
+      <div className="skill-item"><SiVisualstudiocode size={40} color="#007ACC" /> VS Code</div>
+      <div className="skill-item"><SiNetbeans size={40} color="#00A800" /> NetBeans</div>
+      <div className="skill-item"><SiEclipse size={40} color="#2C2255" /> Eclipse</div>
+      
+      {/* Otras herramientas */}
+      <div className="skill-item"><SiPostman size={40} color="#FF6C37" /> Postman</div>
+      
+      {/* Otras habilidades */}
       <div className="skill-item"><FaReact size={40} color="#61DAFB" /> React</div>
       <div className="skill-item"><SiSpring size={40} color="#6DB33F" /> Spring Boot</div>
       <div className="skill-item"><SiApachemaven size={40} color="#C71A36" /> Maven</div>
+      <div className="skill-item"><SiJetpackcompose size={40} color="#3DDC84" /> Jetpack Compose</div>
       <div className="skill-item"><SiAndroid size={40} color="#3DDC84" /> Android</div>
       <div className="skill-item"><FaGitAlt size={40} color="#F05032" /> Git, Subversion</div>
     </div>
@@ -206,13 +205,10 @@ const Experience = () => {
       role: 'Desarrollador de Software (Prácticas)',
       company: 'ATOS IT Solutions & Services',
       location: 'Santiago de Compostela, España',
-      description: `Participé en el proyecto Logas para el SERGAS, desarrollando soluciones full-stack con JavaScript/Dojo en el frontend y Java, Spring Boot y Hibernate en el backend. Contribuí a la optimización de bases de datos Oracle y a pruebas de APIs REST con Postman.`
+      description: `Participé en el desarrollo del proyecto 'Logas' y 'Logas Conta' para el SERGAS, desarrollando soluciones full-stack con JavaScript/Dojo en el frontend y Java, Spring Boot y Hibernate en el backend. Contribuí a la optimización de bases de datos Oracle y a pruebas de APIs REST con Postman.`
     },
     {
       id: 2,
-      role: 'Experiencia Profesional en Otros Sectores',
-      company: 'Varias Empresas',
-      location: 'Diversas Localidades',
       description: `Cuento con más de 8 años de experiencia en sectores no tecnológicos, lo que me ha dotado de habilidades en trabajo en equipo, adaptabilidad y resolución de problemas.`
     }
   ];
@@ -241,8 +237,7 @@ const Education = () => {
     {
       id: 1,
       degree: 'Técnico Superior en Desarrollo de Aplicaciones Multiplataforma',
-      institution: 'I.E.S. Plurilingüe Antón Losada Dieguéz',
-      location: 'A Estrada, España'
+      institution: 'Institución: I.E.S. Plurilingüe Antón Losada Dieguéz',
     }
   ];
 
@@ -269,13 +264,12 @@ const Contact = () => (
     <h2>Contacto</h2>
     <div className="contact-info">
       <p>
-        <FaEnvelope size={40} color="#D44638" /><a href="mailto:Dieg0Barreir01@hotmail.com">Dieg0Barreir01@hotmail.com</a>
+        <FaEnvelope size={40} color="#D44638" />
+        <a href="mailto:contacto@diegobarreiro.dev">contacto@diegobarreiro.dev</a>
       </p>
       <p>
-        <FaWhatsapp size={40} color="#25D366" /><a href="tel:+34684070703">684070703</a>
-      </p>
-      <p>
-        <FaPhone size={40} color="#25D366" /><a href="tel:+34684070703">684070703</a>
+        <FaWhatsapp size={40} color="#25D366" />
+        <a href="tel:+34684070703">684070703</a>
       </p>
     </div>
     <h3>¿Quieres enviarme un mensaje?</h3>
@@ -305,7 +299,7 @@ const Footer = () => (
 
 // --- Componente principal App ---
 function App() {
-  // Modo oscuro por defecto: true
+  // Modo oscuro por defecto
   const [darkMode, setDarkMode] = useState(true);
   const toggleDarkMode = () => setDarkMode(!darkMode);
 

@@ -146,7 +146,7 @@ section h2 {
   color: #555;
 }
 
-/* NUEVOS ESTILOS: Tech Stack con relieve */
+/* Tech Stack con relieve */
 .project-info .tech-stack {
   display: flex;
   flex-wrap: wrap;
@@ -167,26 +167,6 @@ section h2 {
 .project-info .tech-stack span:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-/* Botón para ver el repositorio */
-.project-buttons {
-  margin-top: 1rem;
-}
-
-.project-buttons .btn-repo {
-  background-color: #007bff;
-  color: #fff;
-  text-decoration: none;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.project-buttons .btn-repo:hover {
-  background-color: #0056b3;
 }
 
 /* Estilos para la sección About */
@@ -281,7 +261,7 @@ section h2 {
   background-color: #0056b3;
 }
 
-/* NUEVOS ESTILOS PARA NAVBAR RESPONSIVO */
+/* NAVBAR RESPONSIVO */
 
 /* Estilo base para el Navbar */
 .navbar {
@@ -439,4 +419,11 @@ section h2 {
 
 .App.dark .dark-mode-toggle:hover {
   background-color: #666;
+}
+
+/* Ajustes navbar texto en modo oscuro */
+.App.dark .navbar .logo,
+.App.dark .navbar .nav-links ul li a,
+.App.dark .navbar .menu-icon {
+  color: #e0e0e0;
 }
