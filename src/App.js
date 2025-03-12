@@ -191,9 +191,6 @@ const Skills = () => (
       {/* Herramientas de desarrollo / IDEs */}
       <div className="skill-item"><SiIntellijidea size={40} color="#000000" /> IntelliJ IDEA</div>
       <div className="skill-item"><SiAndroidstudio size={40} color="#3DDC84" /> Android Studio</div>
-      <div className="skill-item"><SiVisualstudiocode size={40} color="#007ACC" /> VS Code</div>
-      <div className="skill-item"><SiNetbeans size={40} color="#00A800" /> NetBeans</div>
-      <div className="skill-item"><SiEclipse size={40} color="#2C2255" /> Eclipse</div>
       
       {/* Otras herramientas */}
       <div className="skill-item"><SiPostman size={40} color="#FF6C37" /> Postman</div>
