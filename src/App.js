@@ -25,7 +25,6 @@ import {
   SiJetpackcompose,
   SiIntellijidea,
   SiAndroidstudio,
-  SiEclipse,
   SiPostman
 } from 'react-icons/si';
 import heroBackground from './images/hero-background.jpg'; // Imagen de fondo
