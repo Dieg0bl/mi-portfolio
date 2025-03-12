@@ -13,11 +13,26 @@ import {
   FaEnvelope,
   FaReact,
   FaRobot,
-  FaPhone
+  FaPhone,
+  FaLinux,
+  FaWindows
 } from 'react-icons/fa';
-import { SiSpring, SiApachemaven, SiKotlin, SiAndroid, SiJetpackcompose } from 'react-icons/si';
+import {
+  SiSpring,
+  SiApachemaven,
+  SiKotlin,
+  SiAndroid,
+  SiJetpackcompose,
+  SiIntellijidea,
+  SiAndroidstudio,
+  SiVisualstudiocode,
+  SiNetbeans,
+  SiEclipse,
+  SiPostman
+} from 'react-icons/si';
 import heroBackground from './images/hero-background.jpg'; // Imagen de fondo
 import profileImage from './images/profile.jpg'; // Imagen de perfil
+
 
 // --- Componente Navbar con menú responsivo ---
 const Navbar = ({ toggleDarkMode, darkMode }) => {
