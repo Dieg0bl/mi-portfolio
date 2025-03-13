@@ -14,6 +14,8 @@ import {
   FaReact,
   FaLinux,
   FaWindows,
+  FaRobot,
+  FaPhone,
 } from 'react-icons/fa';
 import {
   SiSpring,
@@ -23,7 +25,7 @@ import {
   SiJetpackcompose,
   SiIntellijidea,
   SiAndroidstudio,
-  SiPostman
+  SiPostman,
 } from 'react-icons/si';
 import heroBackground from './images/hero-background.jpg';
 import profileImage from './images/profile.jpg';
@@ -31,7 +33,6 @@ import profileImage from './images/profile.jpg';
 // --- Componente Navbar ---
 const Navbar = ({ toggleDarkMode, darkMode }) => {
   const [menuOpen, setMenuOpen] = useState(false);
-
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
   };
@@ -39,11 +40,9 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
   return (
     <header className="navbar">
       <div className="logo">Diego Barreiro</div>
-
       <div className="menu-icon" onClick={handleMenuToggle}>
         &#9776;
       </div>
-
       <nav className={menuOpen ? 'nav-links nav-active' : 'nav-links'}>
         <ul>
           <li><a href="#home" onClick={() => setMenuOpen(false)}>Inicio</a></li>
@@ -55,7 +54,6 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
           <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contacto</a></li>
         </ul>
       </nav>
-
       <div className="social-links">
         <a href="https://www.linkedin.com/in/diego-barreiro-20580826b/" target="_blank" rel="noopener noreferrer">
           <FaLinkedin size={40} />
@@ -64,7 +62,6 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
           <FaGithub size={40} />
         </a>
       </div>
-
       <button className="dark-mode-toggle" onClick={toggleDarkMode}>
         {darkMode ? 'Modo Claro' : 'Modo Oscuro'}
       </button>
@@ -74,11 +71,7 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
 
 // --- Componente Hero ---
 const Hero = () => (
-  <section
-    id="home"
-    className="hero"
-    style={{ backgroundImage: `url(${heroBackground})` }}
-  >
+  <section id="home" className="hero" style={{ backgroundImage: `url(${heroBackground})` }}>
     <div className="hero-overlay">
       <h1>Hola, soy Diego Barreiro</h1>
       <p>Desarrollador de Software Junior en Aplicaciones Multiplataforma</p>
@@ -145,7 +138,6 @@ const Projects = () => {
       tech: [
         { icon: <FaJava size={20} color="#007396" />, name: 'Java' },
         { icon: <SiSpring size={20} color="#6DB33F" />, name: 'Spring Boot' },
-        { icon: <FaDatabase size={20} color="#4DB33D" />, name: 'MySQL' }
       ],
       image: heroBackground,
       codeLink: 'https://github.com/Dieg0bl/ALDComputerService'
@@ -157,9 +149,10 @@ const Projects = () => {
       description:
         'Plataforma enfocada a la búsqueda y localización de profesionales en diversas áreas. Permite filtrar por sector, ver ubicaciones en tiempo real y contactar con profesionales de forma rápida.',
       tech: [
-        { icon: <FaReact size={20} color="#61DAFB" />, name: 'React' },
-        { icon: <FaJsSquare size={20} color="#F7DF1E" />, name: 'JavaScript' },
-        { icon: <FaDatabase size={20} color="#4DB33D" />, name: 'PostgreSQL' }
+        { icon: <FaReact size={20} color="#61DAFB" />, name: 'Kotlin' },
+        { icon: <FaJsSquare size={20} color="#F7DF1E" />, name: 'Jetpack Compose' },
+        { icon: <FaDatabase size={20} color="#4DB33D" />, name: 'MVVM' },
+        { icon: <FaDatabase size={20} color="#4DB33D" />, name: 'Firebase' }
       ],
       image: heroBackground,
       codeLink: 'https://github.com/Dieg0bl/FindPRO'
@@ -201,78 +194,70 @@ const Skills = () => (
     {/* Franja Superior con 5 Skills Destacados */}
     <div className="top-skills-grid">
       <div className="skill-item top">
-        <FaJava size={50} color="#007396" /> Java
+        <FaJava size={60} color="#007396" /> Java
       </div>
       <div className="skill-item top">
-        <SiKotlin size={50} color="#A97BFF" /> Kotlin
+        <SiKotlin size={60} color="#A97BFF" /> Kotlin
       </div>
       <div className="skill-item top">
-        <FaDatabase size={50} color="#4DB33D" /> SQL
+        <FaDatabase size={60} color="#4DB33D" /> SQL
       </div>
       <div className="skill-item top">
-        <FaHtml5 size={50} color="#E34F26" /> HTML5
+        <FaHtml5 size={60} color="#E34F26" /> HTML5
       </div>
       <div className="skill-item top">
-        <FaCss3Alt size={50} color="#1572B6" /> CSS3
+        <FaCss3Alt size={60} color="#1572B6" /> CSS3
       </div>
     </div>
-    {/* Resto de habilidades en tamaño estándar */}
+    {/* Resto de habilidades */}
     <div className="skills-grid">
       <div className="skill-item">
-        <FaLinux size={40} color="#FCC624" /> Linux (Ubuntu, Debian)
+        <FaLinux size={30} color="#FCC624" /> Linux (Ubuntu, Debian)
       </div>
       <div className="skill-item">
-        <FaWindows size={40} color="#00A4EF" /> Windows
+        <FaWindows size={30} color="#00A4EF" /> Windows
       </div>
       <div className="skill-item">
-        <SiIntellijidea size={40} color="#000000" /> IntelliJ IDEA
+        <SiIntellijidea size={30} color="#000000" /> IntelliJ IDEA
       </div>
       <div className="skill-item">
-        <SiAndroidstudio size={40} color="#3DDC84" /> Android Studio
+        <SiAndroidstudio size={30} color="#3DDC84" /> Android Studio
       </div>
       <div className="skill-item">
-        <SiPostman size={40} color="#FF6C37" /> Postman
+        <SiPostman size={30} color="#FF6C37" /> Postman
       </div>
       <div className="skill-item">
-        <FaReact size={40} color="#61DAFB" /> React
+        <FaReact size={30} color="#61DAFB" /> React
       </div>
       <div className="skill-item">
-        <SiSpring size={40} color="#6DB33F" /> Spring Boot
+        <SiSpring size={30} color="#6DB33F" /> Spring Boot
       </div>
       <div className="skill-item">
-        <SiApachemaven size={40} color="#C71A36" /> Maven
+        <SiApachemaven size={30} color="#C71A36" /> Maven
       </div>
       <div className="skill-item">
-        <SiJetpackcompose size={40} color="#3DDC84" /> Jetpack Compose
+        <SiJetpackcompose size={30} color="#3DDC84" /> Jetpack Compose
       </div>
       <div className="skill-item">
-        <SiAndroid size={40} color="#3DDC84" /> Android
+        <SiAndroid size={30} color="#3DDC84" /> Android
       </div>
       <div className="skill-item">
-        <FaGitAlt size={40} color="#F05032" /> Git, Subversion
+        <FaGitAlt size={30} color="#F05032" /> Git, Subversion
       </div>
     </div>
   </section>
 );
-
 
 // --- Componente Experience ---
 const Experience = () => {
   const experiences = [
     {
       id: 1,
-      role: 'Desarrollador de Software (Prácticas)',
+      role: 'Desarrollador de Software Junior',
       company: 'ATOS IT Solutions & Services',
       location: 'Santiago de Compostela, España',
-      description: `Participé en el desarrollo del proyecto 'Logas' y 'Logas Conta' para el SERGAS, con enfoque full-stack: interfaces en JavaScript/Dojo y backend con Java, Spring Boot y Hibernate. Gestioné bases de datos Oracle y realicé pruebas de APIs REST con Postman.`
+      description: `"Participé en el desarrollo de los proyectos 'Logas' y 'Logas Conta', aplicaciones destinadas a la logística y contabilidad del Servicio Galego de Saúde (SERGAS). Durante esta etapa, con un enfoque full-stack, adquirí valiosa experiencia en frontend (utilizando JavaScript/Dojo) y en backend (con Java, Spring y Hibernate), complementada por el manejo de Oracle, APIs REST y Postman."`
     },
-    {
-      id: 2,
-      role: 'Experiencia en otros Sectores',
-      company: 'Diferentes Empresas',
-      location: 'Galicia, España',
-      description: `Cuento con más de 8 años de experiencia en sectores no tecnológicos, lo que me ha dotado de habilidades como trabajo en equipo, adaptabilidad y resolución de problemas.`
-    }
   ];
 
   return (
@@ -300,9 +285,6 @@ const Education = () => {
       id: 1,
       degree: 'Técnico Superior en Desarrollo de Aplicaciones Multiplataforma',
       institution: 'I.E.S. Plurilingüe Antón Losada Dieguéz',
-      location: 'A Estrada, España',
-      period: 'Septiembre 2022 - Junio 2024',
-      description: `Formación centrada en desarrollo multiplataforma Android (Kotlin, Jetpack Compose), Java, Spring Boot, metodologías ágiles (Scrum, Kanban) y uso de control de versiones (Git).`
     }
   ];
 
