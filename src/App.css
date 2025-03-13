@@ -1,5 +1,3 @@
-/* App.css */
-
 /* Contenedor principal de la aplicación */
 .App {
   text-align: center;
@@ -30,7 +28,9 @@
   color: #21a1f1;
 }
 
-/* Parrilla de habilidades */
+/* =========================
+   Parrilla de habilidades
+========================= */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -47,7 +47,9 @@
   text-align: center;
 }
 
-/* Secciones generales */
+/* =========================
+   Secciones Generales
+========================= */
 section {
   margin: 60px 0;
   padding: 0 20px;
@@ -59,17 +61,9 @@ section h2 {
   font-size: 2em;
 }
 
-/* Estilos para la imagen de perfil */
-.profile-picture {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: top;
-  margin-bottom: 20px;
-}
-
-/* Estilos para la sección Hero */
+/* =========================
+   Hero (inicio)
+========================= */
 .hero {
   position: relative;
   background-size: cover;
@@ -85,7 +79,28 @@ section h2 {
   border-radius: 10px;
 }
 
-/* Estilos para la sección de proyectos, experiencia y educación */
+/* =========================
+   Imagen de perfil en About
+========================= */
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   About
+========================= */
+.about-content p {
+  margin-bottom: 20px;
+}
+
+/* =========================
+   Proyectos, Experiencia, Educación
+========================= */
 .projects-grid,
 .experience-grid,
 .education-grid {
@@ -139,6 +154,7 @@ section h2 {
   margin: 10px 0;
 }
 
+/* Tech Stack (tags de tecnologías) */
 .project-info .tech-stack,
 .experience-info .tech-stack,
 .education-info .tech-stack {
@@ -146,7 +162,6 @@ section h2 {
   color: #555;
 }
 
-/* Tech Stack con relieve */
 .project-info .tech-stack {
   display: flex;
   flex-wrap: wrap;
@@ -169,12 +184,9 @@ section h2 {
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-/* Estilos para la sección About */
-.about-content p {
-  margin-bottom: 20px;
-}
-
-/* Botón y grupo de botones */
+/* =========================
+   Botón y grupo de botones
+========================= */
 .button-group {
   margin-top: 20px;
   display: flex;
@@ -197,7 +209,9 @@ section h2 {
   background-color: #0056b3;
 }
 
-/* Estilos para la sección Contact */
+/* =========================
+   Contact
+========================= */
 .contact-info {
   text-align: left;
   margin: 0 auto;
@@ -261,8 +275,9 @@ section h2 {
   background-color: #0056b3;
 }
 
-/* NAVBAR RESPONSIVO */
-
+/* =========================
+   Navbar Responsive
+========================= */
 /* Estilo base para el Navbar */
 .navbar {
   display: flex;
@@ -341,6 +356,7 @@ section h2 {
     flex-direction: column;
     align-items: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center; /* Centra el contenido del contenedor principal de navegación */
   }
 
   .navbar nav.nav-active {
@@ -352,19 +368,25 @@ section h2 {
     gap: 1rem;
     width: 100%;
     padding: 1rem 0;
+    justify-content: center; /* Centra los ítems horizontalmente */
+  }
+
+  .navbar .nav-links ul li a {
+    text-align: center; /* Asegura que cada link esté centrado */
   }
 
   .navbar .menu-icon {
     display: block;
   }
 
-  /* Opcional: ocultar redes sociales en el menú móvil */
   .navbar .social-links {
-    display: none;
+    display: none; /* Oculta las redes sociales en menú móvil, si así lo deseas */
   }
 }
 
-/* MODO OSCURO Y CLARO */
+/* =========================
+   Modo Oscuro y Claro
+========================= */
 
 /* Modo oscuro por defecto */
 .App.dark {
