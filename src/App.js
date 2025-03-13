@@ -124,7 +124,8 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'Portfolio Personal (Web)',
+      title: 'Portfolio Personal',
+      platform: 'Web',
       description:
         'Mi portafolio, desarrollado con React y desplegado en GitHub Pages, muestra mis habilidades y proyectos. Diseño responsivo, modo oscuro y claro, y secciones que reflejan mi formación y experiencia.',
       tech: [
@@ -137,7 +138,8 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: 'ALDComputerService (Desktop)',
+      title: 'ALDComputerService',
+      platform: 'Desktop',
       description:
         'Aplicación de escritorio para la gestión integral de equipos informáticos y reparaciones. Incluye gestión de inventario, seguimiento de reparaciones, y reportes automáticos.',
       tech: [
@@ -150,9 +152,10 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: 'FindPRO (Android)',
+      title: 'FindPRO',
+      platform: 'Android',
       description:
-        'Plataforma enfocada a la búsqueda y localización de profesionales. Permite filtrar por sector, ver ubicaciones en tiempo real, y contactar con profesionales de forma rápida y sencilla.',
+        'Plataforma enfocada a la búsqueda y localización de profesionales en diversas áreas. Permite filtrar por sector, ver ubicaciones en tiempo real y contactar con profesionales de forma rápida.',
       tech: [
         { icon: <FaReact size={20} color="#61DAFB" />, name: 'React' },
         { icon: <FaJsSquare size={20} color="#F7DF1E" />, name: 'JavaScript' },
@@ -173,6 +176,7 @@ const Projects = () => {
               <img src={project.image} alt={project.title} />
               <div className="project-info">
                 <h3>{project.title}</h3>
+                <span className="platform-tag">{project.platform}</span>
                 <p>{project.description}</p>
                 <p className="tech-stack">
                   {project.tech.map((tech, index) => (
@@ -194,26 +198,63 @@ const Projects = () => {
 const Skills = () => (
   <section id="skills" className="skills container">
     <h2>Habilidades Técnicas</h2>
+    {/* Franja Superior con 5 Skills Destacados */}
+    <div className="top-skills-grid">
+      <div className="skill-item top">
+        <FaJava size={50} color="#007396" /> Java
+      </div>
+      <div className="skill-item top">
+        <SiKotlin size={50} color="#A97BFF" /> Kotlin
+      </div>
+      <div className="skill-item top">
+        <FaDatabase size={50} color="#4DB33D" /> SQL
+      </div>
+      <div className="skill-item top">
+        <FaHtml5 size={50} color="#E34F26" /> HTML5
+      </div>
+      <div className="skill-item top">
+        <FaCss3Alt size={50} color="#1572B6" /> CSS3
+      </div>
+    </div>
+    {/* Resto de habilidades en tamaño estándar */}
     <div className="skills-grid">
-      <div className="skill-item"><FaJava size={40} color="#007396" /> Java</div>
-      <div className="skill-item"><SiKotlin size={40} color="#A97BFF" /> Kotlin</div>
-      <div className="skill-item"><FaDatabase size={40} color="#4DB33D" /> SQL (Oracle, MySQL, PostgreSQL, MariaDB)</div>
-      <div className="skill-item"><FaHtml5 size={40} color="#E34F26" /> HTML5</div>
-      <div className="skill-item"><FaCss3Alt size={40} color="#1572B6" /> CSS3</div>
-      <div className="skill-item"><FaLinux size={40} color="#FCC624" /> Linux (Ubuntu, Debian)</div>
-      <div className="skill-item"><FaWindows size={40} color="#00A4EF" /> Windows</div>
-      <div className="skill-item"><SiIntellijidea size={40} color="#000000" /> IntelliJ IDEA</div>
-      <div className="skill-item"><SiAndroidstudio size={40} color="#3DDC84" /> Android Studio</div>
-      <div className="skill-item"><SiPostman size={40} color="#FF6C37" /> Postman</div>
-      <div className="skill-item"><FaReact size={40} color="#61DAFB" /> React</div>
-      <div className="skill-item"><SiSpring size={40} color="#6DB33F" /> Spring Boot</div>
-      <div className="skill-item"><SiApachemaven size={40} color="#C71A36" /> Maven</div>
-      <div className="skill-item"><SiJetpackcompose size={40} color="#3DDC84" /> Jetpack Compose</div>
-      <div className="skill-item"><SiAndroid size={40} color="#3DDC84" /> Android</div>
-      <div className="skill-item"><FaGitAlt size={40} color="#F05032" /> Git, Subversion</div>
+      <div className="skill-item">
+        <FaLinux size={40} color="#FCC624" /> Linux (Ubuntu, Debian)
+      </div>
+      <div className="skill-item">
+        <FaWindows size={40} color="#00A4EF" /> Windows
+      </div>
+      <div className="skill-item">
+        <SiIntellijidea size={40} color="#000000" /> IntelliJ IDEA
+      </div>
+      <div className="skill-item">
+        <SiAndroidstudio size={40} color="#3DDC84" /> Android Studio
+      </div>
+      <div className="skill-item">
+        <SiPostman size={40} color="#FF6C37" /> Postman
+      </div>
+      <div className="skill-item">
+        <FaReact size={40} color="#61DAFB" /> React
+      </div>
+      <div className="skill-item">
+        <SiSpring size={40} color="#6DB33F" /> Spring Boot
+      </div>
+      <div className="skill-item">
+        <SiApachemaven size={40} color="#C71A36" /> Maven
+      </div>
+      <div className="skill-item">
+        <SiJetpackcompose size={40} color="#3DDC84" /> Jetpack Compose
+      </div>
+      <div className="skill-item">
+        <SiAndroid size={40} color="#3DDC84" /> Android
+      </div>
+      <div className="skill-item">
+        <FaGitAlt size={40} color="#F05032" /> Git, Subversion
+      </div>
     </div>
   </section>
 );
+
 
 // --- Componente Experience ---
 const Experience = () => {
