@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import { FaExclamationCircle, FaPhone } from 'react-icons/fa';
 import {
   FaLinkedin,
   FaGithub,
@@ -35,6 +36,93 @@ import {
 
 import heroBackground from './images/hero-background.jpg';
 import profileImage from './images/profile.jpg';
+import aldComputerServiceImage from './images/aldComputerServiceImage.jpg';
+import findProImage from './images/profindersImage.jpg';
+
+//
+// --- Componente Navbar ---
+const Navbar = ({ toggleDarkMode, darkMode }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const handleMenuToggle = () => setMenuOpen(!menuOpen);
+
+  return (
+    <header className="navbar">
+      <div className="logo">Diego Barreiro</div>
+      <div className="menu-icon" onClick={handleMenuToggle}>
+        &#9776;
+      </div>
+      <nav className={menuOpen ? 'nav-links nav-active' : 'nav-links'}>
+        <ul>
+          <li><a href="#home" onClick={() => setMenuOpen(false)}>Inicio</a></li>
+          <li><a href="#about" onClick={() => setMenuOpen(false)}>Sobre mí</a></li>
+          <li><a href="#projects" onClick={() => setMenuOpen(false)}>Proyectos</a></li>
+          <li><a href="#skills" onClick={() => setMenuOpen(false)}>Habilidades</a></li>
+          <li><a href="#experience" onClick={() => setMenuOpen(false)}>Experiencia</a></li>
+          <li><a href="#education" onClick={() => setMenuOpen(false)}>Formación</a></li>
+          <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contacto</a></li>
+        </ul>
+      </nav>
+      <div className="social-links">
+        <a href="https://www.linkedin.com/in/diego-barreiro-20580826b/" target="_blank" rel="noopener noreferrer">
+          <FaLinkedin size={40} />
+        </a>
+        <a href="https://github.com/Dieg0bl" target="_blank" rel="noopener noreferrer">
+          <FaGithub size={40} />
+        </a>
+      </div>
+      <button className="dark-mode-toggle" onClick={toggleDarkMode}>
+        {darkMode ? 'Modo Claro' : 'Modo Oscuro'}
+      </button>
+    </header>
+  );
+};
+
+//
+// --- Componente Hero ---
+const Hero = () => (
+  <section id="home" className="hero" style={{ backgroundImage: `url(${heroBackground})` }}>
+    <div className="hero-overlay">
+      <h1>Hola, soy Diego Barreiro</h1>
+      <p>Desarrollador de Software Junior</p>
+      <a href="#about" className="btn">Conóceme</a>
+    </div>
+  </section>
+);
+
+//
+// --- Componente About ---
+const About = () => (
+  <section id="about" className="about container">
+    <div className="about-content">
+      <img src={profileImage} alt="Perfil de Diego Barreiro" className="profile-picture" />
+      <h2>Sobre mí</h2>
+      <p>
+        Soy Diego Barreiro, desarrollador de software especializado en aplicaciones multiplataforma.
+      </p>
+      <p>
+        Con más de 8 años de experiencia en diversos sectores, en 2022 se me presentó una oportunidad única para impulsar mi carrera profesional. Decidí dejar un empleo estable, en el que había desempeñado mis labores durante años, para formarme en el desarrollo de software. Fue una decisión meditada y estratégica, motivada por el deseo de sentirme realizado y liberar mi creatividad en un campo que me apasiona: crear soluciones innovadoras desde cero y contribuir a la mejora continua de la eficiencia, tanto para empresas como para particulares en su camino hacia el futuro.
+      </p>
+      <p>
+        Mi incursión formal en el mundo del desarrollo comenzó ese mismo año, iniciando mi formación y culminando con prácticas en ATOS IT Solutions & Services, proceso en el que adquirí una sólida base y valiosa experiencia. Desde entonces, he estado ampliando mis conocimientos de forma autodidacta mientras desarrollo proyectos personales, lo que me mantiene en constante aprendizaje. A lo largo de mi formación y experiencia, he consolidado habilidades en Java, Kotlin, Spring, Jetpack Compose y SQL, entre otras, y me esfuerzo día a día por ser un profesional en constante evolución.
+      </p>
+      <p>
+        Me inspira la forma en que referentes del sector transmiten confianza y autonomía. Aunque actualmente me encuentro en una etapa inicial, aspiro a trabajar con el mismo enfoque, libertad y responsabilidad de un profesional experimentado: sin prisa pero sin pausa, sin distracciones y siempre en ascenso, en un entorno que me permita crecer y aprender, tanto de forma autodidacta como en equipo.
+      </p>
+      <p>
+        Al trabajar en equipo, valoro profundamente la confianza y la comunicación directa en el grupo de desarrollo. Mientras se reconozca mi verdadero valor, me comprometo a dar siempre mi cien por cien; de lo contrario, si no aporto un valor tangible, optaré por explorar nuevos horizontes.
+      </p>
+      <p>
+        Mi filosofía es avanzar de manera constante, combinando creatividad, compromiso y curiosidad, con la calidad como pilar central en cada proyecto.
+      </p>
+      <div className="button-group">
+        <a href="#contact" className="btn">Contáctame</a>
+        <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" className="btn">Descargar CV</a>
+      </div>
+    </div>
+  </section>
+);
+
+
 
 //
 // --- Componente Projects (rediseñado estilo "mockup Paint") ---
@@ -80,9 +168,10 @@ const Projects = () => {
         'Aplicación de escritorio para la gestión integral de equipos informáticos y reparaciones. Incluye gestión de inventario, seguimiento de reparaciones y reportes automáticos.',
       tech: [
         { icon: <FaJava size={20} color="#007396" />, name: 'Java' },
+        { icon: <FaCubes size={20} color="#4DB33D" />, name: 'MVC' },
       
       ],
-      image: heroBackground,
+      image: aldComputerServiceImage,
       codeLink: 'https://github.com/Dieg0bl/ALDComputerService'
     },
     {
@@ -93,11 +182,11 @@ const Projects = () => {
         'Plataforma enfocada a la búsqueda y localización de profesionales en diversas áreas. Permite filtrar por sector, ver ubicaciones en tiempo real y contactar con profesionales de forma rápida.',
       tech: [
         { icon: <SiKotlin size={20} color="#A97BFF" />, name: 'Kotlin' },
-        { icon: <FaJsSquare size={20} color="#F7DF1E" />, name: 'Jetpack Compose' },
-        { icon: <FaDatabase size={20} color="#4DB33D" />, name: 'MVVM' },
+        { icon: <FaMobileAlt size={20} color="#F7DF1E" />, name: 'Jetpack Compose' },
+        { icon: <FaCubes size={20} color="#4DB33D" />, name: 'MVVM' },
         { icon: <FaDatabase size={20} color="#4DB33D" />, name: 'Firebase' }
       ],
-      image: heroBackground,
+      image: findProImage,
       codeLink: 'https://github.com/Dieg0bl/FindPRO'
     }
   ];
@@ -153,88 +242,6 @@ const Projects = () => {
   );
 };
 
-//
-// --- Componente Navbar ---
-const Navbar = ({ toggleDarkMode, darkMode }) => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const handleMenuToggle = () => setMenuOpen(!menuOpen);
-
-  return (
-    <header className="navbar">
-      <div className="logo">Diego Barreiro</div>
-      <div className="menu-icon" onClick={handleMenuToggle}>
-        &#9776;
-      </div>
-      <nav className={menuOpen ? 'nav-links nav-active' : 'nav-links'}>
-        <ul>
-          <li><a href="#home" onClick={() => setMenuOpen(false)}>Inicio</a></li>
-          <li><a href="#about" onClick={() => setMenuOpen(false)}>Sobre mí</a></li>
-          <li><a href="#projects" onClick={() => setMenuOpen(false)}>Proyectos</a></li>
-          <li><a href="#skills" onClick={() => setMenuOpen(false)}>Habilidades</a></li>
-          <li><a href="#experience" onClick={() => setMenuOpen(false)}>Experiencia</a></li>
-          <li><a href="#education" onClick={() => setMenuOpen(false)}>Formación</a></li>
-          <li><a href="#contact" onClick={() => setMenuOpen(false)}>Contacto</a></li>
-        </ul>
-      </nav>
-      <div className="social-links">
-        <a href="https://www.linkedin.com/in/diego-barreiro-20580826b/" target="_blank" rel="noopener noreferrer">
-          <FaLinkedin size={40} />
-        </a>
-        <a href="https://github.com/Dieg0bl" target="_blank" rel="noopener noreferrer">
-          <FaGithub size={40} />
-        </a>
-      </div>
-      <button className="dark-mode-toggle" onClick={toggleDarkMode}>
-        {darkMode ? 'Modo Claro' : 'Modo Oscuro'}
-      </button>
-    </header>
-  );
-};
-
-//
-// --- Componente Hero ---
-const Hero = () => (
-  <section id="home" className="hero" style={{ backgroundImage: `url(${heroBackground})` }}>
-    <div className="hero-overlay">
-      <h1>Hola, soy Diego Barreiro</h1>
-      <p>Desarrollador de Software Junior en Aplicaciones Multiplataforma</p>
-      <a href="#about" className="btn">Conóceme</a>
-    </div>
-  </section>
-);
-
-//
-// --- Componente About ---
-const About = () => (
-  <section id="about" className="about container">
-    <div className="about-content">
-      <img src={profileImage} alt="Perfil de Diego Barreiro" className="profile-picture" />
-      <h2>Sobre mí</h2>
-      <p>
-        Soy Diego Barreiro, desarrollador de software especializado en aplicaciones multiplataforma.
-      </p>
-      <p>
-        Con más de 8 años de experiencia en diversos sectores, en 2022 se me presentó una oportunidad única para impulsar mi carrera profesional. Decidí dejar un empleo estable, en el que había desempeñado mis labores durante años, para formarme en el desarrollo de software. Fue una decisión meditada y estratégica, motivada por el deseo de sentirme realizado y liberar mi creatividad en un campo que me apasiona: crear soluciones innovadoras desde cero y contribuir a la mejora continua de la eficiencia, tanto para empresas como para particulares en su camino hacia el futuro.
-      </p>
-      <p>
-        Mi incursión formal en el mundo del desarrollo comenzó ese mismo año, iniciando mi formación y culminando con prácticas en ATOS IT Solutions & Services, proceso en el que adquirí una sólida base y valiosa experiencia. Desde entonces, he estado ampliando mis conocimientos de forma autodidacta mientras desarrollo proyectos personales, lo que me mantiene en constante aprendizaje. A lo largo de mi formación y experiencia, he consolidado habilidades en Java, Kotlin, Spring, Jetpack Compose y SQL, entre otras, y me esfuerzo día a día por ser un profesional en constante evolución.
-      </p>
-      <p>
-        Me inspira la forma en que referentes del sector transmiten confianza y autonomía. Aunque actualmente me encuentro en una etapa inicial, aspiro a trabajar con el mismo enfoque, libertad y responsabilidad de un profesional experimentado: sin prisa pero sin pausa, sin distracciones y siempre en ascenso, en un entorno que me permita crecer y aprender, tanto de forma autodidacta como en equipo.
-      </p>
-      <p>
-        Al trabajar en equipo, valoro profundamente la confianza y la comunicación directa en el grupo de desarrollo. Mientras se reconozca mi verdadero valor, me comprometo a dar siempre mi cien por cien; de lo contrario, si no aporto un valor tangible, optaré por explorar nuevos horizontes.
-      </p>
-      <p>
-        Mi filosofía es avanzar de manera constante, combinando creatividad, compromiso y curiosidad, con la calidad como pilar central en cada proyecto.
-      </p>
-      <div className="button-group">
-        <a href="#contact" className="btn">Contáctame</a>
-        <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" className="btn">Descargar CV</a>
-      </div>
-    </div>
-  </section>
-);
 
 
 //
@@ -265,32 +272,32 @@ const Skills = () => {
         <div className="top-skills-row">
           {/* 1) Java */}
           <div className="skill-item top">
-            <FaJava size={60} color="#007396" />
+            <FaJava size={70} color="#007396" />
             <span>Java</span>
           </div>
           {/* 2) Kotlin */}
           <div className="skill-item top">
-            <SiKotlin size={60} color="#A97BFF" />
+            <SiKotlin size={70} color="#A97BFF" />
             <span>Kotlin</span>
           </div>
           {/* 3) Jetpack Compose */}
           <div className="skill-item top">
-            <FaMobileAlt size={60} color="#F7DF1E" />
+            <FaMobileAlt size={70} color="#F7DF1E" />
             <span>Jetpack Compose</span>
           </div>
           {/* 4) SQL */}
           <div className="skill-item top">
-            <FaDatabase size={60} color="#4DB33D" />
+            <FaDatabase size={70} color="#4DB33D" />
             <span>SQL</span>
           </div>
           {/* 5) HTML5 */}
           <div className="skill-item top">
-            <FaHtml5 size={60} color="#E34F26" />
+            <FaHtml5 size={70} color="#E34F26" />
             <span>HTML5</span>
           </div>
           {/* 6) CSS3 */}
           <div className="skill-item top">
-            <FaCss3Alt size={60} color="#1572B6" />
+            <FaCss3Alt size={70} color="#1572B6" />
             <span>CSS3</span>
           </div>
         </div>
@@ -346,6 +353,10 @@ const Skills = () => {
                 <SiKotlin size={30} color="#A97BFF" />
                 <span>Kotlin</span>
               </div>
+              <div className="skill-item">
+              <FaDatabase size={20} color="#4DB33D" />
+                <span>Firebase</span>
+              </div>              
               {/* Hibernate */}
               <div className="skill-item">
                 <FaLeaf size={30} color="#4caf50" />
@@ -433,30 +444,82 @@ const Skills = () => {
 //
 // --- Componente Experience ---
 const Experience = () => {
+  // Estado para controlar la visualización del modal de detalles en la experiencia previa (id: 2)
+  const [modalVisible, setModalVisible] = useState(false);
+
   const experiences = [
     {
       id: 1,
       role: 'Desarrollador de Software Junior',
       company: 'ATOS IT Solutions & Services',
       location: 'Santiago de Compostela, España',
-      description: `"Participé en el desarrollo de proyectos destinados a la logística y contabilidad. Con enfoque full-stack, adquirí experiencia tanto en frontend como en backend (Java, Spring, APIs REST), y el manejo de Oracle y Postman."`
+      description: `"Participé en el desarrollo de proyectos destinados a la logística y contabilidad del Servicio Galego de Saúde (SERGAS). Con enfoque full-stack, adquirí experiencia tanto en frontend como en backend (Java, Spring, APIs REST), y el manejo de Oracle y Postman."`
+    },
+    {
+      id: 2,
+      role: 'Experiencia Previa +8 años',
+      company: 'Diversas Empresas del Sector Metalúrgico y Logístico y otras',
+      location: 'España',
+      description: `"Cuento con 8 años de experiencia en campos variados, como la soldadura y la logística, entre otros. Durante este tiempo, desarrollé habilidades en trabajo en equipo, disciplina y resolución de problemas, además de adquirir experiencia en el uso del ERP SAP a nivel usuario, lo que me permitió comprender procesos operativos y administrativos. Esta experiencia me ha forjado como un profesional versátil y capaz de adaptarse a nuevos retos."`,
+      details: [
+        "2011 – 2012: Trabajé en INSTALACIONES SOGAS, S.L. – Comercial de puerta fría.",
+        "2014: Experiencias en Cerámicas Verea a través de Nortempo ETT – Operario de producción y control de calidad.",
+        "2015: Continuación en Cerámicas Verea (Nortempo ETT) – Producción y control de calidad.",
+        "2015 – 2016: Trabajé en Parking Santiago S.C. – Gestión de stock automovilístico y transporte de clientes.",
+        "2016 – 2017: Global Metal & Piping Services – Montaje y soldadura (cese prematuro por accidente laboral).\n* NOTA: Cabe destacar que compaginé las labores en Parking Santiago con las de Global Metal & Piping Services de forma simultánea durante un tiempo.",
+        "2017 – 2022: Experiencia en Finsa – Colaboración en procesos logísticos de carga, descarga y almacenaje, con uso diario del ERP SAP."
+      ]
     }
-  ];
+    
+  ];    
+
+  // Buscamos la experiencia que tenga detalles (id: 2)
+  const experienceWithDetails = experiences.find(exp => exp.id === 2);
 
   return (
     <section id="experience" className="experience container">
       <h2>Experiencia Laboral</h2>
       <div className="experience-grid">
-        {experiences.map((exp) => (
+        {experiences.map(exp => (
           <div className="experience-item" key={exp.id}>
             <div className="experience-info">
               <h3>{exp.role}</h3>
-              {exp.company && <p className="company">{exp.company} | {exp.location}</p>}
+              {exp.company && (
+                <p className="company">
+                  {exp.company} | {exp.location}
+                </p>
+              )}
               <p className="description">{exp.description}</p>
+              {exp.details && (
+                <button
+                  className="details-icon-btn"
+                  onClick={() => setModalVisible(true)}
+                  title="Ver detalles"
+                >
+                 <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+  <FaExclamationCircle size={25} />
+  <span style={{ fontSize: '20px' }}>Ver Detalle</span>
+</div>
+
+
+                </button>
+              )}
             </div>
           </div>
         ))}
       </div>
+      {modalVisible && experienceWithDetails && (
+        <div className="modal-overlay" onClick={() => setModalVisible(false)}>
+          <div className="modal-content" onClick={e => e.stopPropagation()}>
+            <button className="modal-close-btn" onClick={() => setModalVisible(false)}>X</button>
+            <ul className="details-text">
+              {experienceWithDetails.details.map((line, index) => (
+                <li key={index}>{line}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
@@ -474,7 +537,7 @@ const Education = () => {
 
   return (
     <section id="education" className="education container">
-      <h2>Formación</h2>
+      <h2>Formación relacionada con Desarrollo de Software</h2>
       <div className="education-grid">
         {educationList.map((edu) => (
           <div className="education-item" key={edu.id}>
@@ -502,9 +565,14 @@ const Contact = () => (
         <a href="mailto:contacto@diegobarreiro.dev">contacto@diegobarreiro.dev</a>
       </p>
       <p>
-        <FaWhatsapp size={40} color="#25D366" />
+        <FaPhone size={40} color="#25D366" />
         <a href="tel:+34684070703">+34 684070703</a>
       </p>
+      <p>
+      <FaWhatsapp size={40} color="#25D366" />
+        <a href="tel:+34684070703">+34 684070703</a>
+      </p>
+     
     </div>
     <h3>¿Quieres enviarme un mensaje?</h3>
     <p>Utiliza el siguiente formulario:</p>

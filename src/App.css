@@ -576,3 +576,179 @@
   gap: 10px;
 }
 
+/* ===================================
+/* ===================================
+   Sección Experiencia
+=================================== */
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.experience-item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.experience-info {
+  padding: 20px;
+  text-align: left;
+}
+
+.experience-info h3 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+.experience-info .company {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.experience-info .description {
+  margin: 10px 0;
+}
+
+/* Botón para abrir el modal */
+.details-icon-btn {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 10px;
+}
+
+/* ===================================
+   Modal
+=================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0; /* Más espacio arriba y abajo */
+  z-index: 2000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 30px;            /* Más padding interior */
+  border-radius: 10px;
+  max-width: 900px;         /* Más ancho máximo */
+  width: 90%;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;         /* Permite scroll si excede la altura */
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.details-text {
+  margin-top: 20px;
+  font-size: 1.1rem;       /* Texto más grande */
+  line-height: 1.8;        /* Espacio vertical más amplio */
+  text-align: left;        /* Alineado a la izquierda */
+  list-style: disc outside;
+  padding-left: 40px;      /* Sangría para viñetas */
+  margin-bottom: 20px;     /* Espacio adicional al final */
+}
+
+.details-text li {
+  margin-bottom: 10px;     /* Separación entre cada ítem */
+}
+
+/* ===================================
+   Modo oscuro para Experiencia y Modal
+=================================== */
+.App.dark .modal-content {
+  background: #2a2a2a;
+  color: #e0e0e0;
+  border: 1px solid #555;
+}
+
+.App.dark .details-text {
+  background-color: #3a3a3a;  /* Opcional: si deseas un fondo distinto dentro de la lista */
+  border-color: #555;
+}
+
+/* ===================================
+   Sección Experiencia
+=================================== */
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;            /* Aumenta el espacio horizontal entre tarjetas */
+  margin-top: 50px;     /* Más espacio antes de la primera */
+  margin-bottom: 50px;  /* Más espacio después de la última */
+}
+
+.experience-item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;  /* Espacio adicional entre cada tarjeta */
+}
+
+.experience-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.experience-info {
+  padding: 25px;       /* Más padding interior */
+  text-align: left;
+}
+
+.experience-info h3 {
+  margin-top: 0;
+  font-size: 1.6em;    /* Título más grande */
+}
+
+.experience-info .company {
+  font-style: italic;
+  margin-bottom: 15px; /* Más espacio debajo */
+}
+
+.experience-info .description {
+  margin: 15px 0;      /* Más espacio vertical */
+}
+
+/* Modo oscuro para tarjetas */
+.App.dark .experience-item {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+}
+
+.App.dark .experience-item:hover {
+  box-shadow: 0 8px 16px rgba(255,255,255,0.1);
+}
+
+.App.dark .experience-info .description {
+  color: #e0e0e0;
+}
