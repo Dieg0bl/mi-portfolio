@@ -31,13 +31,15 @@ import {
   SiIntellijidea,
   SiAndroid,
   SiApachemaven,
-  SiPostman
+  SiPostman,
+  SiOdoo
 } from 'react-icons/si';
 
 import heroBackground from './images/hero-background.jpg';
 import profileImage from './images/profile.jpg';
 import aldComputerServiceImage from './images/aldComputerServiceImage.jpg';
 import findProImage from './images/profindersImage.jpg';
+import cvFile from './documents/CV_Diego_Barreiro.pdf';
 
 //
 // --- Componente Navbar ---
@@ -116,7 +118,7 @@ const About = () => (
       </p>
       <div className="button-group">
         <a href="#contact" className="btn">Contáctame</a>
-        <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" className="btn">Descargar CV</a>
+        <a href={cvFile} download="CV_Diego_Barreiro.pdf" className="btn">Descargar CV</a>
       </div>
     </div>
   </section>
@@ -243,19 +245,13 @@ const Projects = () => {
 };
 
 
-
-//
 // --- Componente Skills ---
-//   Organizado por Stacks: Web, Mobile, Development Tools, Arquitecturas
-//
 
 const Skills = () => {
   // Estado para controlar si se muestran o no las secciones en móvil
   const [showMore, setShowMore] = useState(false);
 
-  // Media query sencilla para detectar móvil (max-width: 768px)
-  // Podrías usar un hook o librería, pero aquí un truco: window.innerWidth
-  // sin SSR. Para algo más robusto, usar un hook custom o react-responsive.
+  // Media query móvil (max-width: 768px)
   const isMobile = window.innerWidth <= 768;
 
   // Handler para "Ver más" o "Ver menos"
@@ -415,6 +411,10 @@ const Skills = () => {
               <div className="skill-item">
                 <FaGitAlt size={30} color="#F05032" />
                 <span>Git / SVN</span>
+              </div>
+              <div className="skill-item">
+                <SiOdoo size={30} color="#003366" />
+                <span>Odoo ERP</span>
               </div>
               <div className="skill-item">
                 <SiApachemaven size={30} color="#C71A36" />
