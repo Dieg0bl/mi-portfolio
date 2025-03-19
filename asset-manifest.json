@@ -1,19 +1,20 @@
 {
   "files": {
     "main.css": "/static/css/main.2cabc323.css",
-    "main.js": "/static/js/main.b2738b26.js",
+    "main.js": "/static/js/main.5396359f.js",
     "static/js/453.c3176deb.chunk.js": "/static/js/453.c3176deb.chunk.js",
     "static/media/profile.jpg": "/static/media/profile.cbe9778d34ddb5cd3a47.jpg",
+    "static/media/CV_Diego_Barreiro.pdf": "/static/media/CV_Diego_Barreiro.3fa0de92d980b1f0025a.pdf",
     "static/media/profindersImage.jpg": "/static/media/profindersImage.dec6b337fca5481e59bb.jpg",
     "static/media/hero-background.jpg": "/static/media/hero-background.f2a738f5cab23d99338c.jpg",
     "static/media/aldComputerServiceImage.jpg": "/static/media/aldComputerServiceImage.dfd910f36d9ef904b825.jpg",
     "index.html": "/index.html",
     "main.2cabc323.css.map": "/static/css/main.2cabc323.css.map",
-    "main.b2738b26.js.map": "/static/js/main.b2738b26.js.map",
+    "main.5396359f.js.map": "/static/js/main.5396359f.js.map",
     "453.c3176deb.chunk.js.map": "/static/js/453.c3176deb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2cabc323.css",
-    "static/js/main.b2738b26.js"
+    "static/js/main.5396359f.js"
   ]
 }
