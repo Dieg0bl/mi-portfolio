@@ -572,7 +572,6 @@ const Contact = () => (
       <FaWhatsapp size={40} color="#25D366" />
         <a href="tel:+34684070703">+34 684070703</a>
       </p>
-     
     </div>
     <h3>¿Quieres enviarme un mensaje?</h3>
     <p>Utiliza el siguiente formulario:</p>
