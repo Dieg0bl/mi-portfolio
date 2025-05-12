@@ -69,7 +69,7 @@ const Projects = () => {
               <h3 className="project-title" itemProp="name">{project.title}</h3>
             </header>
             <picture>
-              <img src={project.imageWebp} alt={`Miniatura del proyecto ${project.title}`} className="project-card-image" loading="lazy" itemProp="image" />
+              <img src={project.imageWebp} alt={`Miniatura del proyecto ${project.title}`} className="project-card-image" loading="lazy" width="320" height="180" itemProp="image" style={{aspectRatio: '16/9', objectFit: 'cover', borderRadius: '8px'}} />
             </picture>
             <div className="project-card-body">
               <div className="description-box">

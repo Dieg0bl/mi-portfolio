@@ -6,7 +6,7 @@ const About = () => (
   <section id="about" className="about container" aria-labelledby="about-heading">
     <div className="about-content">
       <picture>
-        <img src={profileImageWebp} alt="Foto de perfil de Diego Barreiro, desarrollador full-stack" className="profile-picture" loading="lazy" />
+        <img src={profileImageWebp} alt="Foto de perfil de Diego Barreiro, desarrollador full-stack" className="profile-picture" loading="lazy" width="180" height="180" />
       </picture>
       <h2 id="about-heading">Sobre mí</h2>
       <p>Soy Diego Barreiro, desarrollador de software especializado en aplicaciones multiplataforma.</p>

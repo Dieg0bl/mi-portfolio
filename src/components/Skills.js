@@ -12,12 +12,12 @@ const Skills = () => {
       <h2 id="skills-heading">Habilidades Técnicas</h2>
       <div className="top-skills-highlight">
         <div className="top-skills-row">
-          <div className="skill-item top"><FaJava size={70} color="#007396" /><span>Java</span></div>
-          <div className="skill-item top"><SiSpring size={70} color="#6DB33F" /><span>Spring Boot</span></div>
-          <div className="skill-item top"><FaHtml5 size={70} color="#E34F26" /><span>HTML5</span></div>
-          <div className="skill-item top"><FaCss3Alt size={70} color="#1572B6" /><span>CSS3</span></div>
-          <div className="skill-item top"><FaJsSquare size={70} color="#F7DF1E" /><span>JavaScript</span></div>
-          <div className="skill-item top"><SiKotlin size={70} color="#A97BFF" /><span>Kotlin</span></div>
+          <div className="skill-item top"><FaJava size={70} color="#007396" style={{width: 70, height: 70}} /><span>Java</span></div>
+          <div className="skill-item top"><SiSpring size={70} color="#6DB33F" style={{width: 70, height: 70}} /><span>Spring Boot</span></div>
+          <div className="skill-item top"><FaHtml5 size={70} color="#E34F26" style={{width: 70, height: 70}} /><span>HTML5</span></div>
+          <div className="skill-item top"><FaCss3Alt size={70} color="#1572B6" style={{width: 70, height: 70}} /><span>CSS3</span></div>
+          <div className="skill-item top"><FaJsSquare size={70} color="#F7DF1E" style={{width: 70, height: 70}} /><span>JavaScript</span></div>
+          <div className="skill-item top"><SiKotlin size={70} color="#A97BFF" style={{width: 70, height: 70}} /><span>Kotlin</span></div>
         </div>
       </div>
       {(!isMobile || showMore) && (
