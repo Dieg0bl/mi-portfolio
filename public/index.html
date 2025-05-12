@@ -1,15 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="192x192" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="%PUBLIC_URL%/logo512.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/logo192.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <meta name="description" content="Portfolio de Diego Barreiro, desarrollador full-stack. Proyectos, experiencia, contacto y CV. ¡Conóceme y colabora!" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Portfolio de Diego Barreiro – Desarrollador Full-Stack" />
+    <meta property="og:description" content="Portfolio de Diego Barreiro, desarrollador full-stack. Proyectos, experiencia, contacto y CV." />
+    <meta property="og:image" content="%PUBLIC_URL%/profile.webp" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://diegobarreiro.dev" />
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Portfolio de Diego Barreiro – Desarrollador Full-Stack" />
+    <meta name="twitter:description" content="Portfolio de Diego Barreiro, desarrollador full-stack. Proyectos, experiencia, contacto y CV." />
+    <meta name="twitter:image" content="%PUBLIC_URL%/profile.webp" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -24,10 +35,40 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>DiegoBarreiroDev</title>
+    <!-- Google Analytics -->
+    <!-- Copia el contenido de analytics.html aquí y reemplaza G-XXXXXXXXXX por tu ID real -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <title>Portfolio de Diego Barreiro – Desarrollador Full-Stack</title>
+    <meta name="title" content="Portfolio de Diego Barreiro – Desarrollador Full-Stack" />
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <section>
+        <h1>Diego Barreiro – Desarrollador Full-Stack</h1>
+        <h2>Sobre mí</h2>
+        <p>Soy Diego Barreiro, desarrollador de software especializado en aplicaciones multiplataforma. Con más de 8 años de experiencia en diversos sectores, en 2022 decidí dejar un empleo estable para formarme en el desarrollo de software. Desde entonces, he trabajado en proyectos personales y prácticas en ATOS IT Solutions & Services, consolidando habilidades en Java, Kotlin, Spring, Jetpack Compose y SQL, entre otras. Mi filosofía es avanzar de manera constante, combinando creatividad, compromiso y curiosidad, con la calidad como pilar central en cada proyecto.</p>
+        <ul>
+          <li><a href="/documents/CV_Diego_Barreiro.pdf" target="_blank" rel="noopener">Ver mi CV</a></li>
+          <li><a href="https://github.com/Dieg0bl" target="_blank" rel="noopener">Ver mi GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/diego-barreiro-20580826b/" target="_blank" rel="noopener">Ver mi LinkedIn</a></li>
+          <li><a href="https://github.com/Dieg0bl/mi-portfolio" target="_blank" rel="noopener">Portfolio Personal (React)</a></li>
+          <li><a href="https://github.com/Dieg0bl/ALDComputerService" target="_blank" rel="noopener">ALDComputerService (Java Desktop)</a></li>
+          <li><a href="https://github.com/Dieg0bl/FindPRO" target="_blank" rel="noopener">FindPRO (Android/Kotlin)</a></li>
+          <li><a href="#contact">Contrátame</a></li>
+        </ul>
+        <h2>Contacto</h2>
+        <ul>
+          <li>Email principal: <a href="mailto:contacto@diegobarreiro.dev">contacto@diegobarreiro.dev</a></li>
+          <li>Email alternativo: <a href="mailto:diegobarreirodev@gmail.com">diegobarreirodev@gmail.com</a></li>
+        </ul>
+      </section>
+    </noscript>
     <div id="root"></div>
     <!--
       This HTML file is a template.
