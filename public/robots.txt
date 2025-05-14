@@ -1,4 +1,9 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
-Sitemap: https://www.diegobarreiro.dev/sitemap.xml
+
+Sitemap: https://diegobarreiro.dev/sitemap.xml
+
+# Block sensitive files
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/

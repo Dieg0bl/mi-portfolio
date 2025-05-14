@@ -1,31 +1,92 @@
-# Portafolio Personal - Diego Barreiro
+# Portfolio – Diego Barreiro
 
-Bienvenido/a a mi portafolio personal. Este proyecto, además de ser mi propio portfolio, representó para mi un reto personal en el que me propuse aprovechar su desarrollo para practicar nuevas habilidades, adentrándome de lleno y por primera vez en la utilización de React. La aplicación cuenta con un diseño responsivo y modos de visualización claro y oscuro para una óptima experiencia de usuario.
+Este proyecto es un portafolio personal desarrollado para mostrar mi experiencia, habilidades y proyectos destacados como desarrollador. Está optimizado con un enfoque en accesibilidad, rendimiento y diseño profesional.
 
-## Características
+## 🌐 Demo
 
-- **Diseño Responsivo:** Se adapta a dispositivos móviles, tablets y escritorio.
-- **Modo Oscuro/Claro:** Permite cambiar entre ambos modos para mayor comodidad visual.
-- **Proyectos Destacados:** Cada proyecto incluye una descripción, tecnologías utilizadas y enlaces a su repositorio en GitHub.
-- **Secciones Organizadas:** Información sobre mi perfil, habilidades, experiencia laboral, formación y un formulario de contacto.
+- [Sitio web](https://diegobarreiro.dev)
+- [Descargar CV en PDF](public/documents/CV_Diego_Barreiro.pdf)
 
-## Tecnologías Utilizadas
+## ✨ Características
 
-- **React** (Create React App)
-- **HTML5, CSS3 y JavaScript (ES6+)**
-- **React Icons**
-- **Git y GitHub**
+- **Diseño moderno y responsivo:** Adaptado para dispositivos móviles y de escritorio.
+- **Internacionalización (i18n):** Disponible en español e inglés.
+- **SEO optimizado:** Meta tags, Open Graph, sitemap.xml, robots.txt.
+- **Accesibilidad:** Navegación por teclado, roles ARIA, etiquetas descriptivas.
+- **Optimización de rendimiento:** Uso de imágenes WebP y carga eficiente.
+- **Secciones clave:**
+  - Sobre mí
+  - Proyectos destacados
+  - Experiencia profesional
+  - Educación
+  - Habilidades técnicas
+  - Contacto directo
 
-## Contacto
+## 🛠️ Tecnologías Utilizadas
 
-- **Email:** [contacto@diegobarreiro.dev](mailto:contacto@diegobarreiro.dev)
-- **LinkedIn:** [linkedin.com/in/diego-barreiro-20580826b](https://linkedin.com/in/diego-barreiro-20580826b)
-- **GitHub:** [github.com/Dieg0bl](https://github.com/Dieg0bl)
+- **Framework:** [Next.js](https://nextjs.org/)
+- **Frontend:** React, HTML5, CSS3
+- **Internacionalización:** i18n con JSON
+- **Testing:** Jest + React Testing Library
+- **Optimización de imágenes:** next/image
+- **Calidad de código:** ESLint, Prettier
 
-## Contribuciones
+## 📂 Estructura del Proyecto
 
-Estoy siempre abierto a sugerencias y feedback para mejorar. No dudes en contactarme directamente.
+```text
+public/           # Imágenes, documentos, manifest, robots.txt, sitemap.xml
+src/components/   # Componentes principales y tests
+src/locales/      # Archivos de traducción i18n
+pages/            # Entrypoints Next.js
+styles/           # CSS global
+```
+
+## 🚀 Instalación y Uso
+
+1. Clona el repositorio:
+
+   ```bash
+   git clone https://github.com/DiegoBarreiro/mi-portfolio.git
+   cd mi-portfolio
+   ```
+
+2. Instala las dependencias:
+
+   ```bash
+   npm install
+   ```
+
+3. Inicia el servidor de desarrollo:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
+
+## 🧪 Testing
+
+Ejecuta las pruebas unitarias:
+
+```bash
+npm test
+```
+
+Genera un informe de cobertura en `/coverage` para validar la calidad del código.
+
+## 🌍 Despliegue
+
+- **Recomendado:** [Vercel](https://vercel.com/) (auto-detecta Next.js)
+- **Alternativas:** Netlify, Docker, etc.
+
+## 🤝 Contribuciones
+
+¡Las pull requests y sugerencias son bienvenidas! Si tienes ideas para mejorar este proyecto, no dudes en contribuir.
+
+## 📜 Licencia
+
+Este proyecto está bajo la licencia MIT. Puedes consultar el archivo [LICENSE](LICENSE) para más detalles.
 
 ---
 
-¡Gracias por visitar mi portafolio y por tu interés!
+> Este portafolio está diseñado para destacar mi experiencia, habilidades y proyectos. ¡Gracias por visitarlo!

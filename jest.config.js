@@ -1,8 +1,16 @@
 module.exports = {
+  testEnvironment: 'jsdom',
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-    '\\.(jpg|jpeg|png|webp|svg|pdf)$': '<rootDir>/src/__mocks__/fileMock.js'
+    '^@/(.*)$': '<rootDir>/src/$1',
   },
-  setupFilesAfterEnv: ['<rootDir>/src/setupTests.js'],
-  testEnvironment: 'jsdom',
+  transform: {
+    '^.+\\.(js|jsx|ts|tsx)$': 'babel-jest',
+  },
+  testPathIgnorePatterns: ['/node_modules/', '/.next/'],
+  collectCoverageFrom: [
+    'src/components/**/*.{js,jsx,ts,tsx}',
+    '!src/components/__tests__/*'
+  ]
 };

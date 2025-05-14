@@ -29,17 +29,17 @@ const Experience = () => {
   ];
   const experienceWithDetails = experiences.find(exp => exp.id === 2);
   return (
-    <section id="experience" className="experience container">
-      <h2>Experiencia Laboral</h2>
+    <section id="experience" className="experience container" aria-labelledby="experience-heading" role="region" aria-label="Experiencia profesional de Diego Barreiro">
+      <h2 id="experience-heading">Experiencia Profesional</h2>
       <div className="experience-grid">
         {experiences.map(exp => (
           <div className="experience-item" key={exp.id}>
             <div className="experience-info">
               <h3>{exp.role}</h3>
               {exp.company && <p className="company">{exp.company} | {exp.location}</p>}
-              <p className="description">{exp.description}</p>
+              <p className="description">{exp.description}</p>         
               {exp.details && (
-                <button className="details-icon-btn" onClick={() => setModalVisible(true)} title="Ver detalles">
+                <button className="details-icon-btn" onClick={() => setModalVisible(true)} title="Ver detalles" aria-label="Ver detalles de experiencia previa">
                   <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
                     <FaExclamationCircle size={25} />
                     <span style={{ fontSize: '20px' }}>Ver Detalle</span>
@@ -51,9 +51,9 @@ const Experience = () => {
         ))}
       </div>
       {modalVisible && experienceWithDetails && (
-        <div className="modal-overlay" onClick={() => setModalVisible(false)}>
+        <div className="modal-overlay" onClick={() => setModalVisible(false)} role="dialog" aria-modal="true" aria-label="Detalles de experiencia previa">
           <div className="modal-content" onClick={e => e.stopPropagation()}>
-            <button className="modal-close-btn" onClick={() => setModalVisible(false)}>X</button>
+            <button className="modal-close-btn" onClick={() => setModalVisible(false)} aria-label="Cerrar detalles">X</button>
             <ul className="details-text">
               {experienceWithDetails.details.map((line, index) => (
                 <li key={index}>{line}</li>

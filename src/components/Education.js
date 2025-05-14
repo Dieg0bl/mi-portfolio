@@ -12,8 +12,8 @@ const Education = () => {
     }
   ];
   return (
-    <section id="education" className="education container">
-      <h2>Formación relacionada con Desarrollo de Software</h2>
+    <section id="education" className="education container" aria-labelledby="education-heading" role="region" aria-label="Formación académica de Diego Barreiro">
+      <h2 id="education-heading">Formación relacionada con Desarrollo de Software</h2>
       <div className="education-grid">
         {educationList.map((edu) => (
           <div className="education-item" key={edu.id}>

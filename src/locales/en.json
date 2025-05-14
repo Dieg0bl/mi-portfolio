@@ -1,0 +1,19 @@
+{
+  "footer.copyright": "© {{year}} Diego Barreiro. All rights reserved.",
+  "footer.altEmail": "Alternate email:",
+  "footer.linkedin": "LinkedIn Diego Barreiro",
+  "footer.github": "GitHub Diego Barreiro",
+  "footer.email": "Send email to Diego Barreiro",
+  "about.title": "About me",
+  "about.intro": "I'm Diego Barreiro, a software developer specialized in multiplatform applications.",
+  "about.p1": "With over 8 years of experience in various sectors, in 2022 I was presented with a unique opportunity to boost my professional career. I decided to leave a stable job, where I had worked for years, to train in software development. It was a thoughtful and strategic decision, motivated by the desire to feel fulfilled and unleash my creativity in a field I am passionate about: creating innovative solutions from scratch and contributing to the continuous improvement of efficiency, both for companies and individuals on their way to the future.",
+  "about.p2": "My formal entry into the world of development began that same year, starting my training and culminating with an internship at ATOS IT Solutions & Services, a process in which I acquired a solid foundation and valuable experience. Since then, I have been expanding my knowledge self-taught while developing personal projects, which keeps me in constant learning. Throughout my training and experience, I have consolidated skills in Java, Kotlin, Spring, Jetpack Compose, and SQL, among others, and I strive every day to be a professional in constant evolution.",
+  "about.p3": "I am inspired by how industry leaders convey trust and autonomy. Although I am currently at an early stage, I aspire to work with the same approach, freedom, and responsibility as an experienced professional: steadily, without distractions, and always on the rise, in an environment that allows me to grow and learn, both self-taught and as a team.",
+  "about.p4": "When working in a team, I deeply value trust and direct communication within the development group. As long as my true value is recognized, I am committed to always giving my one hundred percent; otherwise, if I do not provide tangible value, I will choose to explore new horizons.",
+  "about.p5": "My philosophy is to move forward constantly, combining creativity, commitment, and curiosity, with quality as the central pillar in every project.",
+  "about.contact": "Contact me",
+  "about.downloadCV": "Download CV",
+  "hero.title": "Diego Barreiro – Full-Stack Developer",
+  "hero.subtitle": "Junior Software Developer",
+  "hero.cta": "Get to know me"
+}

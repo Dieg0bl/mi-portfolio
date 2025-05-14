@@ -1,17 +1,48 @@
 import React from 'react';
-import heroBackgroundWebp from '../images/hero-background.webp';
+import Image from 'next/image';
 
-const Hero = () => (
-  <section id="home" className="hero">
-    <picture>
-      <img src={heroBackgroundWebp} alt="Fondo hero Diego Barreiro" className="hero-bg" loading="lazy" style={{width:'100%',height:'auto',position:'absolute',zIndex:-1,top:0,left:0}} />
-    </picture>
-    <div className="hero-overlay">
-      <h1>Diego Barreiro – Desarrollador Full-Stack</h1>
-      <p>Desarrollador de Software Junior</p>
-      <a href="#about" className="btn">Conóceme</a>
-    </div>
-  </section>
-);
+const translations = {
+  es: require('../locales/es.json'),
+  en: require('../locales/en.json'),
+};
+
+const t = (key, vars = {}, locale = 'es') => {
+  let str = (translations[locale] && translations[locale][key]) || translations['es'][key] || key;
+  Object.entries(vars).forEach(([k, v]) => {
+    str = str.replace(`{{${k}}}`, v);
+  });
+  return str;
+};
+
+const Hero = () => {
+  const [locale, setLocale] = React.useState('es');
+  React.useEffect(() => {
+    if (typeof window !== 'undefined' && window.localStorage) {
+      const stored = window.localStorage.getItem('locale');
+      if (stored) {
+        setLocale(() => stored);
+      }
+    }
+  }, []);
+  return (
+    <section id="home" className="hero" aria-label={t('hero.title', {}, locale) + ' – Presentación profesional de Diego Barreiro'}>
+      <Image
+        src="/images/hero-background.webp"
+        alt="Fondo profesional de Diego Barreiro, desarrollador full-stack"
+        className="hero-bg"
+        fill
+        style={{objectFit:'cover',zIndex:-1,top:0,left:0}}
+        priority
+        role="presentation"
+        aria-hidden="true"
+      />
+      <div className="hero-overlay">
+        <h1>{t('hero.title', {}, locale)}</h1>
+        <p>{t('hero.subtitle', {}, locale)}</p>
+        <a href="#about" className="btn">{t('hero.cta', {}, locale)}</a>
+      </div>
+    </section>
+  );
+};
 
 export default Hero;
